@@ -12,11 +12,13 @@ export default function Store() {
   const openModal = (el) => {
     setSelectedModal(el);
     setModalIsOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setSelectedModal(null);
     setModalIsOpen(false);
+    document.body.style.overflow = "unset";
   };
 
   function getData() {
