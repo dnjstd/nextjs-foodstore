@@ -1,16 +1,26 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Store() {
-  useEffect(() => {
+  const [list, setList] = useState([]);
+
+  function getData() {
     axios
       .get("http://localhost:9000/stores")
-      .then((Response) => {
-        console.log(Response.data);
+      .then((res) => {
+        console.log(res.data);
+        setList(res.data);
       })
       .catch((Error) => {
-        console.log(Error, "데이터를 못가져옴");
+        console.log(Error);
       });
+  }
+
+  useEffect(() => {
+    getData();
   }, []);
+
+  // console.log("list>>>", list);
+
   return <div>Store페이지입니다.</div>;
 }
