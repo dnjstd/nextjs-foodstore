@@ -1,9 +1,25 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Modal from "../src/component/Modal";
 
 export default function Store() {
   const [list, setList] = useState([]);
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedModal, setSelectedModal] = useState(null);
+
+  const openModal = (el) => {
+    setSelectedModal(el);
+    setModalIsOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    setSelectedModal(null);
+    setModalIsOpen(false);
+    document.body.style.overflow = "unset";
+  };
 
   function getData() {
     axios
@@ -35,8 +51,17 @@ export default function Store() {
         <h2>STORE</h2>
         <CardWrapper>
           {list.map((item) => {
-            return <img src={item.thumb} alt={item.name} />;
+            return (
+              <img
+                src={item.thumb}
+                alt={item.name}
+                onClick={() => openModal(item)}
+              />
+            );
           })}
+          {modalIsOpen && (
+            <Modal closeModal={closeModal} selectedModal={selectedModal} />
+          )}
         </CardWrapper>
       </Container>
     </main>
@@ -82,7 +107,7 @@ const Container = styled.section`
 const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+  gap: 30px;
 
   img {
     border-radius: 8px;
