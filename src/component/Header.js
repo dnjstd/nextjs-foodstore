@@ -65,6 +65,7 @@ const HeaderLeft = styled.div`
 
   .lang {
     padding: 12px;
+
     img {
       width: 18px;
     }

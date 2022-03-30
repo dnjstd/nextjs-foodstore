@@ -5,5 +5,6 @@ export default function About() {
 }
 
 const Container = styled.main`
-  height: 200vh;
+  height: 5000px;
+  background-color: black;
 `;
