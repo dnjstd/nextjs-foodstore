@@ -77,7 +77,12 @@ const Close = styled.button`
 
 const InnerRight = styled.div`
   padding: 80px;
+  white-space: pre-wrap;
+  line-height: 24px;
 
+  h2 {
+    padding-bottom: 50px;
+  }
   .url {
     font-size: 12px;
     font-weight: 800;
