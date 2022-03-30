@@ -40,6 +40,7 @@ export default function Header() {
 
 const Container = styled.header`
   position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -57,7 +58,7 @@ const Container = styled.header`
 
 const HeaderLeft = styled.div`
   display: flex;
-
+  font-size: 12px;
   div {
     display: flex;
     align-items: center;
@@ -78,7 +79,7 @@ const HeaderLeft = styled.div`
 
 const Menu = styled.ul`
   display: flex;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
 
   li {
@@ -89,9 +90,9 @@ const Menu = styled.ul`
   .submenu {
     position: absolute;
     width: 100vw;
-    height: 200px;
+    height: 140px;
     left: 0px;
-    padding: 24px 280px 0 0;
+    padding: 24px 200px 0 0;
     text-align: center;
     background-color: #fff;
     border-bottom: 1px solid #e4e4e4;
@@ -107,7 +108,7 @@ const Menu = styled.ul`
 `;
 
 const Logo = styled.div`
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
   color: #464ea3;
 `;

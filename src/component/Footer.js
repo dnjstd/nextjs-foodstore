@@ -32,8 +32,9 @@ export default function Footer() {
 const Container = styled.footer`
   margin: 60px 24px 0 24px;
   padding: 24px 0;
-  border-top: 10px solid #eee;
+  border-top: 8px solid #eee;
   box-sizing: border-box;
+  font-size: 12px;
 `;
 
 const LogoWrapper = styled.div`
@@ -42,7 +43,7 @@ const LogoWrapper = styled.div`
   align-items: center;
 
   .logo {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
   }
 
@@ -50,12 +51,12 @@ const LogoWrapper = styled.div`
     display: flex;
 
     i {
-      font-size: 32px;
+      font-size: 24px;
       padding: 10px;
       cursor: pointer;
 
       &:first-child::before {
-        border-left: 2px solid #dee2e6;
+        border-left: 1px solid #dee2e6;
         padding-left: 24px;
       }
     }
