@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import Image from "next/image";
 
 export default function Modal({ closeModal, selectedModal }) {
   return (
@@ -8,14 +9,14 @@ export default function Modal({ closeModal, selectedModal }) {
         <Close onClick={closeModal}>
           <i className="bi bi-x-lg"></i>
         </Close>
-        <img src={selectedModal.image} />
+        <img src={selectedModal.image} alt={selectedModal.name} />
         <InnerRight>
-          <h2>{selectedModal && selectedModal.name}</h2>
-          <p>{selectedModal && selectedModal.description}</p>
-          <div class="url">
+          <h2>{selectedModal.name}</h2>
+          <p>{selectedModal.description}</p>
+          <div className="url">
             {selectedModal.url ? (
-              <Link href={selectedModal && selectedModal.url}>
-                <a>{selectedModal && selectedModal.url}</a>
+              <Link href={selectedModal.url}>
+                <a>{selectedModal.url}</a>
               </Link>
             ) : null}
           </div>
@@ -76,6 +77,7 @@ const Close = styled.button`
 `;
 
 const InnerRight = styled.div`
+  width: 50%;
   padding: 80px;
   white-space: pre-wrap;
   line-height: 24px;

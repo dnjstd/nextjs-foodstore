@@ -1,11 +1,16 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Modal from "../src/component/Modal";
 
-export default function Store() {
-  const [list, setList] = useState([]);
+export async function getServerSideProps() {
+  const res = await axios.get(`http://localhost:9000/stores`);
+  const data = res.data;
 
+  return { props: { data } };
+}
+
+export default function Store({ data }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedModal, setSelectedModal] = useState(null);
 
@@ -21,22 +26,6 @@ export default function Store() {
     document.body.style.overflow = "unset";
   };
 
-  function getData() {
-    axios
-      .get("http://localhost:9000/stores")
-      .then((res) => {
-        console.log(res.data);
-        setList(res.data);
-      })
-      .catch((Error) => {
-        console.log(Error);
-      });
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <main>
       <TitleWrap>
@@ -50,12 +39,13 @@ export default function Store() {
       <Container>
         <h2>STORE</h2>
         <CardWrapper>
-          {list.map((item) => {
+          {data.map((item, idx) => {
             return (
               <img
                 src={item.thumb}
                 alt={item.name}
                 onClick={() => openModal(item)}
+                key={idx}
               />
             );
           })}
