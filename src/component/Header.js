@@ -11,6 +11,7 @@ export default function Header() {
         </div>
         <div className="online">ONLINE SHOP</div>
       </HeaderLeft>
+
       <nav>
         <Menu>
           <li>
@@ -29,6 +30,7 @@ export default function Header() {
           </li>
         </Menu>
       </nav>
+
       <Logo>
         <Link href="/">
           <a>AWESOME FOOD STORE</a>
