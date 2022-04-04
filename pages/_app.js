@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Head from "next/head";
-import Footer from "../src/component/Footer";
-import Header from "../src/component/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 function MyApp({ Component, pageProps }) {
   return (

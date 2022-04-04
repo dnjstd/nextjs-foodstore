@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react";
 import axios from "axios";
-import Modal from "../src/component/Modal";
-import LayoutForm from "../src/component/LayoutForm";
+import Modal from "../components/Modal";
+import LayoutForm from "../components/LayoutForm";
 
 export async function getServerSideProps() {
   const res = await axios.get(`http://localhost:9000/stores`);
