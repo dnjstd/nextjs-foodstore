@@ -21,9 +21,10 @@ export default function About({ dataList }) {
       </p>
       <StoreName>AWESOME FOOD STORE.</StoreName>
       <StoreList>
-        {dataList.map((data, idx) => {
-          return <div key={idx}>・ {data.name}</div>;
-        })}
+        {dataList &&
+          dataList.map((data, idx) => {
+            return <div key={idx}>・ {data.name}</div>;
+          })}
         매장이 입점되어있습니다.
       </StoreList>
 
