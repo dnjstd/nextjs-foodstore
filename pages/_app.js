@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>AWESOME FOOD STORE</title>
+        <title>FOOD STORE</title>
       </Head>
       <Header />
       <Component {...pageProps} />

@@ -33,7 +33,7 @@ export default function Header() {
 
       <Logo>
         <Link href="/">
-          <a>AWESOME FOOD STORE</a>
+          <a>FOOD STORE</a>
         </Link>
       </Logo>
     </Container>

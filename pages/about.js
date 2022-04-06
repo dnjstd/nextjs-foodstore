@@ -19,7 +19,7 @@ export default function About({ dataList }) {
       <p>
         전세계 젊은 문화 코드를 가진 FOOD 브랜드들과 국내 인기 매장들이 공존하는
       </p>
-      <StoreName>AWESOME FOOD STORE.</StoreName>
+      <StoreName>FOOD STORE.</StoreName>
       <StoreList>
         {dataList &&
           dataList.map((data, idx) => {
@@ -29,7 +29,7 @@ export default function About({ dataList }) {
       </StoreList>
 
       <LinkWrapper>
-        <Link href="https://github.com/dnjstd/purpleio-test">
+        <Link href="https://github.com/dnjstd/nextjs-foodstore">
           <a>💁🏼‍♀️ 프로젝트 github 링크 바로가기</a>
         </Link>
       </LinkWrapper>

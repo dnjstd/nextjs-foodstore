@@ -1,6 +1,6 @@
-# Purpleio - AWESOME FOOD STORE
+# 맛집 소개 페이지
 
-퍼플아이오 맛집 리스트 구현 코딩테스트입니다.
+Next.js, React, Bootstrap을 사용한 맛집 소개 미니 프로젝트입니다.
 <br/><br/>
 
 ## 🛠 기술 스택
@@ -53,7 +53,7 @@
 ## 📍 프로젝트 구조
 
 ```
-🗂Purpleio
+🗂nextjs-foodstore
  ┣ 📂components
  ┃ ┣ 📄Footer.js
  ┃ ┣ 📄Header.js

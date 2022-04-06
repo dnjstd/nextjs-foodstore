@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <Container>
       <LogoWrap>
-        <div className="logo">AWESOME FOOD STORE</div>
+        <div className="logo">FOOD STORE</div>
         <div className="sns">
           <i className="bi bi-facebook" />
           <i className="bi bi-instagram" />
@@ -12,14 +12,14 @@ export default function Footer() {
       </LogoWrap>
 
       <Address>
-        <p>서울 특별시 광진구 아차산로 200</p>
+        <p>서울 특별시 강남구</p>
       </Address>
 
       <Info>
-        <li>코오롱인더스트리(주)FnC부문 커먼그라운드</li>
+        <li>회사명</li>
         <li>대표이사: 김이박</li>
         <li>법인등록번호: 123-45-67890</li>
-        <li>서울특별시 강남구 삼성로 518 (삼성동)</li>
+        <li>서울특별시 강남구</li>
       </Info>
 
       <Copyright>Copyright © 2022 원소연.</Copyright>
